@@ -96,29 +96,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 .sec-title{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:700;line-height:1.05;letter-spacing:-.025em;margin-bottom:1rem}
 .sec-title .hl{background:linear-gradient(135deg,var(--purple-soft),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
-/* ── GALLERY ── */
+/* ── GALLERY — masonry columns, natural aspect ratios ── */
 .gallery-sec{background:var(--surface)}
 .gallery-controls{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.5rem;flex-wrap:wrap;gap:1.25rem}
 .filter-bar{display:flex;gap:.35rem;flex-wrap:wrap}
 .fb{background:none;border:1px solid var(--border-soft);color:var(--text-muted);font-family:inherit;font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;padding:.42rem 1rem;border-radius:100px;cursor:none;transition:all .25s}
 .fb.on,.fb:hover{background:var(--purple);border-color:var(--purple);color:#fff;box-shadow:0 0 16px rgba(217,70,168,.35)}
 
-/* bento */
-.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:70px;gap:8px}
-.cell{overflow:hidden;border-radius:12px;position:relative;cursor:none;border:1px solid transparent;transition:border-color .3s}
+/* masonry */
+.bento{columns:3;column-gap:8px}
+.cell{overflow:hidden;border-radius:12px;position:relative;cursor:none;border:1px solid transparent;transition:border-color .3s;break-inside:avoid;margin-bottom:8px;display:block}
 .cell:hover{border-color:rgba(217,70,168,.4)}
-.cell img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.25,.46,.45,.94),filter .45s}
-.cell:hover img{transform:scale(1.06);filter:brightness(.6) saturate(.8)}
+.cell img{width:100%;height:auto;display:block;transition:transform .6s cubic-bezier(.25,.46,.45,.94),filter .45s}
+.cell:hover img{transform:scale(1.04);filter:brightness(.6) saturate(.8)}
 .cell-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,5,15,.9) 0%,rgba(6,5,15,.2) 50%,transparent 100%);opacity:0;transition:opacity .4s;display:flex;align-items:flex-end;padding:1.1rem;border-radius:12px}
 .cell:hover .cell-ov{opacity:1}
 .cell-cat{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--purple-pale);margin-bottom:.2rem}
 .cell-ttl{font-size:.9rem;font-weight:500;color:var(--text)}
-.ca{grid-column:span 4;grid-row:span 4}.cb{grid-column:span 3;grid-row:span 3}
-.cc{grid-column:span 5;grid-row:span 3}.cd{grid-column:span 4;grid-row:span 3}
-.ce{grid-column:span 3;grid-row:span 4}.cf{grid-column:span 5;grid-row:span 4}
-.cg{grid-column:span 4;grid-row:span 3}.ch{grid-column:span 4;grid-row:span 4}
-.ci{grid-column:span 4;grid-row:span 3}.cj{grid-column:span 3;grid-row:span 3}
-.ck{grid-column:span 5;grid-row:span 4}.cl{grid-column:span 4;grid-row:span 3}
+/* size classes no longer needed for grid but kept for JS compat */
+.ca,.cb,.cc,.cd,.ce,.cf,.cg,.ch,.ci,.cj,.ck,.cl{}
 
 /* ── LIGHTBOX ── */
 #lb{position:fixed;inset:0;background:rgba(6,5,15,.97);z-index:800;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s}
@@ -156,15 +152,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 /* ── TIMELINE EXPERIENCE ── */
 .exp-sec{background:var(--surface)}
 .timeline{position:relative;padding-left:0;margin-top:3rem}
-
-/* vertical spine */
 .timeline::before{
   content:'';position:absolute;
   left:110px;top:0;bottom:0;
   width:1px;
   background:linear-gradient(to bottom,transparent,rgba(217,70,168,.35) 8%,rgba(217,70,168,.35) 92%,transparent);
 }
-
 .tl-item{
   position:relative;
   display:grid;
@@ -174,8 +167,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
   padding-bottom:2.5rem;
 }
 .tl-item:last-child{padding-bottom:0}
-
-/* year column */
 .tl-year-col{
   padding-right:2rem;
   padding-top:.3rem;
@@ -192,8 +183,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
   font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
   color:var(--text-dim);margin-top:.2rem;display:block;
 }
-
-/* dot on spine */
 .tl-dot{
   position:absolute;right:-6px;top:.5rem;
   width:12px;height:12px;border-radius:50%;
@@ -207,8 +196,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
   background:linear-gradient(135deg,var(--purple-soft),var(--violet));
   box-shadow:0 0 16px rgba(217,70,168,.7);
 }
-
-/* card */
 .tl-card{
   margin-left:2.5rem;
   background:var(--card);
@@ -226,15 +213,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
   opacity:0;transition:opacity .4s;
 }
 .tl-card:hover::before{opacity:1}
-
-/* connector line from dot to card */
 .tl-connector{
   position:absolute;
   left:110px;top:calc(.5rem + 5px);
   width:2.5rem;height:1px;
   background:rgba(217,70,168,.25);
 }
-
 .tl-org{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--purple-soft);margin-bottom:.4rem}
 .tl-name{font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:.6rem;line-height:1.25}
 .tl-desc{font-size:.82rem;line-height:1.75;color:var(--text-muted)}
@@ -255,8 +239,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 /* ── CONTACT ── */
 .contact-sec{background:var(--surface)}
 .contact-grid{display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:start}
-.contact-email-big{display:block;font-size:clamp(1.5rem,3vw,2.6rem);font-weight:700;letter-spacing:-.02em;background:linear-gradient(135deg,var(--text) 30%,var(--purple-pale) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;margin-bottom:2rem;line-height:1.2;transition:filter .25s}
-.contact-email-big:hover{filter:brightness(1.15)}
 .clink{display:flex;align-items:center;gap:1rem;text-decoration:none;padding:.85rem 1.1rem;background:var(--card);border:1px solid var(--border-soft);border-radius:12px;transition:all .3s;cursor:none;margin-bottom:.6rem}
 .clink:hover{border-color:rgba(217,70,168,.3);background:var(--card2)}
 .clink-icon{width:36px;height:36px;border-radius:9px;background:rgba(217,70,168,.1);border:1px solid rgba(217,70,168,.18);display:flex;align-items:center;justify-content:center;color:var(--purple-soft);flex-shrink:0}
@@ -306,7 +288,7 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
   .sec{padding:4rem 1.25rem}
   .hero{padding:0 1.25rem;padding-top:64px}
   .equip-row{grid-template-columns:1fr}
-  .bento{grid-auto-rows:55px}
+  .bento{columns:2}
   .timeline::before{left:60px}
   .tl-item{grid-template-columns:60px 1fr}
   .tl-connector{left:60px;width:1.5rem}
@@ -316,8 +298,7 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
   .foot-links{justify-content:center}
 }
 @media(max-width:520px){
-  .bento{grid-template-columns:repeat(6,1fr)}
-  .ca,.cb,.cc,.cd,.ce,.cf,.cg,.ch,.ci,.cj,.ck,.cl{grid-column:span 3}
+  .bento{columns:1}
 }
 </style>
 </head>
@@ -594,8 +575,11 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
     <h2 class="sec-title rv d1">Let's make <span class="hl">something together</span></h2>
     <div class="contact-grid">
       <div>
-        <a class="contact-email-big rv d1" href="mailto:christacaitlyn@gmail.com">christa.caitlyn<br>@gmail.com</a>
-        <div class="rv d2">
+        <div class="rv d1">
+          <a class="clink" href="mailto:christa.caitlyn@gmail.com">
+            <div class="clink-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 7l10 7 10-7"/></svg></div>
+            <div><div class="clink-val">christa.caitlyn@gmail.com</div><div class="clink-lbl">Email</div></div>
+          </a>
           <a class="clink" href="https://www.instagram.com/chreezta_/" target="_blank">
             <div class="clink-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></div>
             <div><div class="clink-val">@chreezta_</div><div class="clink-lbl">Instagram</div></div>
@@ -701,8 +685,6 @@ const photos=[
   {src:'sky9.jpg',cat:'skies',title:'Surabaya Skies — Atmosphere',cls:'cc'},
 ];
 
-// ─ bento sizes for variety ─
-const sizes=['ca','cb','cc','cd','ce','cf','cg','ch','ci','cj','ck','cl'];
 let filtered=[...photos],lbIdx=0;
 
 function buildBento(f){
