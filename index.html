@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Christa Caitlyn Wonohadidjojo — Portfolio</title>
+<title>Christa Caitlyn Wonohadidjojo, Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -106,6 +106,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:grid;grid-template-c
 .event-meta{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
 .event-badge{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;background:rgba(217,70,168,.1);border:1px solid rgba(217,70,168,.2);color:var(--purple-pale);padding:.3rem .85rem;border-radius:100px}
 .event-date{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dim)}
+.event-cam{display:inline-flex;align-items:center;gap:.35rem;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);background:rgba(255,255,255,.04);border:1px solid var(--border-soft);padding:.25rem .75rem;border-radius:100px}
 .event-title{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:700;line-height:1.1;letter-spacing:-.02em;margin-bottom:.85rem;color:var(--text)}
 .event-title .hl{background:linear-gradient(135deg,var(--purple-soft),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .event-story-text{font-size:.88rem;line-height:1.85;color:var(--text-muted);max-width:680px;margin-bottom:2.5rem}
@@ -174,18 +175,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:grid;grid-template-c
 .tl-desc{font-size:.82rem;line-height:1.75;color:var(--text-muted)}
 .tl-pill{display:inline-block;margin-top:1rem;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;background:rgba(217,70,168,.1);border:1px solid rgba(217,70,168,.2);color:var(--purple-pale);padding:.28rem .75rem;border-radius:100px}
 
-/* ── EQUIPMENT ── */
-.equip-sec{background:var(--surface)}
-.equip-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border-soft);border:1px solid var(--border-soft);border-radius:16px;overflow:hidden;margin-top:2rem}
-.eq-card{background:var(--surface);padding:2.25rem 2rem;transition:background .3s;cursor:none;position:relative;overflow:hidden}
-.eq-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--purple),var(--violet));transform:scaleX(0);transform-origin:left;transition:transform .4s}
-.eq-card:hover{background:var(--surface2)}
-.eq-card:hover::after{transform:scaleX(1)}
-.eq-ico{width:44px;height:44px;border-radius:12px;background:rgba(217,70,168,.12);border:1px solid rgba(217,70,168,.2);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.25rem;transition:background .3s}
-.eq-card:hover .eq-ico{background:rgba(217,70,168,.22)}
-.eq-name{font-size:1rem;font-weight:600;color:var(--text);margin-bottom:.3rem}
-.eq-spec{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim)}
-
 /* ── CONTACT ── */
 .contact-sec{background:var(--bg)}
 .contact-grid{display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:start}
@@ -219,7 +208,7 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
   .hero-card{display:none}
   .about-grid{grid-template-columns:1fr}
   .about-float{right:1rem}
-  .equip-row{grid-template-columns:1fr 1fr}
+
   .contact-grid{grid-template-columns:1fr}
   .timeline::before{left:80px}
   .tl-item{grid-template-columns:80px 1fr}
@@ -232,7 +221,7 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
   .nav-links{display:none}
   .sec,.portfolio-sec{padding:4rem 1.25rem}
   .hero{padding:0 1.25rem;padding-top:64px}
-  .equip-row{grid-template-columns:1fr}
+
   .masonry{columns:2}
   .timeline::before{left:60px}
   .tl-item{grid-template-columns:60px 1fr}
@@ -283,7 +272,7 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
       </h1>
       <p class="hero-sub rv d2">
         A visual storyteller based in <a href="#">Surabaya, Indonesia</a>.<br>
-        I capture events, people, and moments through honest and intentional photography — from GDG stages to golden-hour streets.
+        I capture events, people, and moments through honest and intentional photography, from GDG stages to golden-hour streets.
       </p>
       <div class="hero-actions rv d3">
         <a href="#portfolio" class="btn-primary">View Portfolio ↓</a>
@@ -322,13 +311,13 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
   </div>
 </div>
 
-<!-- PORTFOLIO — separate page section -->
+<!-- PORTFOLIO, separate page section -->
 <section class="portfolio-sec" id="portfolio">
   <div class="portfolio-inner">
     <div class="portfolio-header rv">
       <div class="sec-tag">Portfolio</div>
       <h2 class="sec-title">Selected <span class="hl">Work</span></h2>
-      <p style="font-size:.88rem;color:var(--text-muted);margin-top:.5rem;max-width:560px">A collection of moments captured across events, portraits, performances, and personal projects — organized by story.</p>
+      <p style="font-size:.88rem;color:var(--text-muted);margin-top:.5rem;max-width:560px">A collection of moments captured across events, portraits, performances, and personal projects, organized by story.</p>
     </div>
 
     <!-- EVENT 1: GDG Build with AI × IWD 2026 -->
@@ -336,10 +325,47 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
       <div class="event-meta">
         <span class="event-badge">Event Documentation</span>
         <span class="event-date">March 2026</span>
+        <span class="event-cam">📷 Sony A7 II · Sony ILCE-7M3</span>
       </div>
       <h3 class="event-title">GDG Build with AI <span class="hl">× IWD 2026</span></h3>
-      <p class="event-story-text">One of the most energizing events I've had the chance to document. Google Developer Groups held this special edition in line with International Women's Day — and the energy in the room was something else. I moved between sponsor booths, speaker sessions, and participant activities, trying to catch both the quiet product details and the louder, candid moments of connection and curiosity.</p>
+      <p class="event-story-text">One of the most energizing events I've had the chance to document. Google Developer Groups held this special edition in line with International Women's Day, and the energy in the room was something else. I moved between sponsor booths, speaker sessions, and participant activities, trying to catch both the quiet product details and the louder, candid moments of connection and curiosity.</p>
       <div class="masonry" id="gallery-gdg"></div>
+    </div>
+
+    <!-- EVENT 1B: ASBIF 2026 -->
+    <div class="event-story rv">
+      <div class="event-meta">
+        <span class="event-badge">Event Documentation</span>
+        <span class="event-date">June 2026</span>
+        <span class="event-cam">📷 Canon EOS 600D · EF 50mm f/1.2</span>
+      </div>
+      <h3 class="event-title">ASBIF <span class="hl">2026</span></h3>
+      <p class="event-story-text">A two-day forum in Surabaya bringing together academics, industry leaders, and ESG practitioners for the Asia-Pacific Sustainable Business and Innovation Forum. I documented both days, from panel discussions to the quieter moments of collaboration between speakers, delegates, and organizers, capturing a gathering centered on sustainability and shared ideas across the region.</p>
+      <div class="masonry" id="gallery-asbif"></div>
+    </div>
+
+    <!-- EVENT 1C: Coding Sprint -->
+    <div class="event-story rv">
+      <div class="event-meta">
+        <span class="event-badge">Event Documentation</span>
+        <span class="event-date">June 2026</span>
+        <span class="event-cam">📷 Canon EOS 600D · EF 50mm f/1.2</span>
+      </div>
+      <h3 class="event-title">Coding <span class="hl">Sprint</span></h3>
+      <p class="event-story-text">A holiday program by Universitas Ciputra Surabaya introducing high school students to Informatics, split across AI and Data Science on the first two days and Full-Stack Development with Flutter on the next two. I covered Day 3 and Day 4, following students as they explored mobile development hands-on for the first time.</p>
+      <div class="masonry" id="gallery-codingsprint"></div>
+    </div>
+
+    <!-- EVENT 1D: Techvolution 3.0 -->
+    <div class="event-story rv">
+      <div class="event-meta">
+        <span class="event-badge">Event Documentation</span>
+        <span class="event-date">June 2026</span>
+        <span class="event-cam">📷 Canon EOS 600D · EF 50mm f/1.2</span>
+      </div>
+      <h3 class="event-title">Techvolution <span class="hl">3.0</span></h3>
+      <p class="event-story-text">A seminar by Google Developer Groups on Campus Universitas Ciputra Surabaya, bringing in two speakers to discuss artificial intelligence and how we can work alongside it. I documented the talks and the audience's engagement throughout the session.</p>
+      <div class="masonry" id="gallery-techvolution"></div>
     </div>
 
     <!-- EVENT 2: Artupic Portrait Series -->
@@ -347,42 +373,46 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
       <div class="event-meta">
         <span class="event-badge">Portrait Photography</span>
         <span class="event-date">2025–2026</span>
+        <span class="event-cam">📱 Samsung S21 Ultra</span>
       </div>
       <h3 class="event-title">Artupic <span class="hl">Portrait Series</span></h3>
-      <p class="event-story-text">With Artupic's creative team, I explored editorial portrait work in urban and natural settings around Surabaya. The goal was always authenticity — catching real expressions in natural light, sometimes with a little creative direction, but never forcing a feeling. These shoots remind me why I love portrait work: you get to witness someone be fully themselves for a moment.</p>
+      <p class="event-story-text">With Artupic's creative team, I explored editorial portrait work in urban and natural settings around Surabaya. The goal was always authenticity, catching real expressions in natural light, sometimes with a little creative direction, but never forcing a feeling. These shoots remind me why I love portrait work: you get to witness someone be fully themselves for a moment.</p>
       <div class="masonry" id="gallery-portrait"></div>
     </div>
 
-    <!-- EVENT 3: Sanmar Visual — 17 August Ceremony -->
+    <!-- EVENT 3: Sanmar Visual, 17 August Ceremony -->
     <div class="event-story rv">
       <div class="event-meta">
         <span class="event-badge">Ceremony</span>
         <span class="event-date">August 2024</span>
+        <span class="event-cam">📷 Canon EOS 750D · EF-S 18–55mm</span>
       </div>
       <h3 class="event-title">17 August <span class="hl">Independence Day</span></h3>
-      <p class="event-story-text">Photographing Indonesia's Independence Day ceremony at SMA Santa Maria was a lesson in patience and timing. The flag-raising, the marching processions, the cultural dress — every frame needed to feel respectful and genuine. I paid close attention to faces: the pride, the concentration, the quiet emotion that comes with marking a national moment together.</p>
+      <p class="event-story-text">Photographing Indonesia's Independence Day ceremony at SMA Santa Maria was a lesson in patience and timing. The flag-raising, the marching processions, the cultural dress, every frame needed to feel respectful and genuine. I paid close attention to faces: the pride, the concentration, the quiet emotion that comes with marking a national moment together.</p>
       <div class="masonry" id="gallery-ceremony"></div>
     </div>
 
-    <!-- EVENT 4: Sanmar Visual — Class Meeting Sports -->
+    <!-- EVENT 4: Sanmar Visual, Class Meeting Sports -->
     <div class="event-story rv">
       <div class="event-meta">
         <span class="event-badge">Sports Documentation</span>
         <span class="event-date">June 2024</span>
+        <span class="event-cam">📷 Canon EOS 750D · EF-S 18–55mm</span>
       </div>
       <h3 class="event-title">Class Meeting <span class="hl">Sports</span></h3>
-      <p class="event-story-text">Inter-class basketball and futsal at full intensity. The challenge here was purely technical — freezing the right decisive moment without losing the energy of the game. I loved the unpredictability of it: the mid-air jumps, the celebration, the rivalry all compressed into a single shutter click.</p>
+      <p class="event-story-text">Inter-class basketball and futsal at full intensity. The challenge here was purely technical, freezing the right decisive moment without losing the energy of the game. I loved the unpredictability of it: the mid-air jumps, the celebration, the rivalry all compressed into a single shutter click.</p>
       <div class="masonry" id="gallery-sports"></div>
     </div>
 
-    <!-- EVENT 5: Sanmar Visual — Final Project Showcase -->
+    <!-- EVENT 5: Sanmar Visual, Final Project Showcase -->
     <div class="event-story rv">
       <div class="event-meta">
         <span class="event-badge">Stage Photography</span>
         <span class="event-date">November 2025</span>
+        <span class="event-cam">📷 Canon EOS 750D · EF-S 18–55mm</span>
       </div>
       <h3 class="event-title">Final Project <span class="hl">Showcase</span></h3>
-      <p class="event-story-text">Stage photography is its own kind of challenge — theatrical lighting, fast movement, and no second chances. The Final Project Showcase at SMA Santa Maria featured traditional dance, drama, choir, and cultural performances. I worked with what the stage gave me, chasing silhouettes and bursts of colour through each act.</p>
+      <p class="event-story-text">Stage photography is its own kind of challenge, theatrical lighting, fast movement, and no second chances. The Final Project Showcase at SMA Santa Maria featured traditional dance, drama, choir, and cultural performances. I worked with what the stage gave me, chasing silhouettes and bursts of colour through each act.</p>
       <div class="masonry" id="gallery-stage"></div>
     </div>
 
@@ -391,9 +421,10 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
       <div class="event-meta">
         <span class="event-badge">Personal Project</span>
         <span class="event-date">Ongoing</span>
+        <span class="event-cam">📱 Samsung S21 Ultra</span>
       </div>
       <h3 class="event-title">Surabaya <span class="hl">Skies</span></h3>
-      <p class="event-story-text">This one started as a habit and became an obsession. Surabaya's skies are quietly dramatic — storm clouds rolling in over palm trees, golden hours that last about four minutes, deep blue evenings that feel like they belong somewhere else. I keep shooting them because they never repeat.</p>
+      <p class="event-story-text">This one started as a habit and became an obsession. Surabaya's skies are quietly dramatic, storm clouds rolling in over palm trees, golden hours that last about four minutes, deep blue evenings that feel like they belong somewhere else. I keep shooting them because they never repeat.</p>
       <div class="masonry" id="gallery-skies"></div>
     </div>
 
@@ -402,9 +433,10 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
       <div class="event-meta">
         <span class="event-badge">Objects & Architecture</span>
         <span class="event-date">Ongoing</span>
+        <span class="event-cam">📱 Samsung S21 Ultra</span>
       </div>
       <h3 class="event-title">Things I <span class="hl">Notice</span></h3>
-      <p class="event-story-text">Not everything worth photographing is a person or an event. Sometimes it's a texture on a wall, light falling through a window, or the way a building looks at a certain hour. This is my running collection of objects and structures that caught my eye — details most people walk past without a second glance.</p>
+      <p class="event-story-text">Not everything worth photographing is a person or an event. Sometimes it's a texture on a wall, light falling through a window, or the way a building looks at a certain hour. This is my running collection of objects and structures that caught my eye, details most people walk past without a second glance.</p>
       <div class="masonry" id="gallery-own"></div>
     </div>
 
@@ -413,9 +445,10 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
       <div class="event-meta">
         <span class="event-badge">Scenery</span>
         <span class="event-date">Ongoing</span>
+        <span class="event-cam">📱 Samsung S21 Ultra</span>
       </div>
       <h3 class="event-title">Places <span class="hl">I've Been</span></h3>
-      <p class="event-story-text">Landscapes and scenes collected along the way — places that made me stop and reach for my camera. Each one felt worth keeping: a view, a moment of stillness, a scene that captured somewhere or something exactly as it was.</p>
+      <p class="event-story-text">Landscapes and scenes collected along the way, places that made me stop and reach for my camera. Each one felt worth keeping: a view, a moment of stillness, a scene that captured somewhere or something exactly as it was.</p>
       <div class="masonry" id="gallery-scenery"></div>
     </div>
 
@@ -450,8 +483,8 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
       <div>
         <div class="sec-tag rv">About Me</div>
         <h2 class="sec-title rv d1">Telling stories <span class="hl">one frame</span> at a time</h2>
-        <p class="about-bio rv d2">Hi, I'm Christa — a passionate visual creator with an interest in photography, visual storytelling, and capturing meaningful moments through the lens. From portraits to event documentation, I create images that reflect emotion, atmosphere, and authentic human connections.</p>
-        <p class="about-bio rv d3">Active in campus organizations and creative communities, I've documented Google Developer events, school ceremonies, performance showcases, and editorial portrait projects — always aiming to preserve stories in a visually honest way.</p>
+        <p class="about-bio rv d2">Hi, I'm Christa, a passionate visual creator with an interest in photography, visual storytelling, and capturing meaningful moments through the lens. From portraits to event documentation, I create images that reflect emotion, atmosphere, and authentic human connections.</p>
+        <p class="about-bio rv d3">Active in campus organizations and creative communities, I've documented Google Developer events, school ceremonies, performance showcases, and editorial portrait projects, always aiming to preserve stories in a visually honest way.</p>
         <div class="tag-cloud rv d3">
           <span class="tag">Event Documentation</span>
           <span class="tag">Portraits</span>
@@ -480,6 +513,51 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
       <div class="tl-item">
         <div class="tl-year-col">
           <span class="tl-year">2026</span>
+          <span class="tl-year-sub">Jun</span>
+          <div class="tl-dot big"></div>
+        </div>
+        <div class="tl-connector"></div>
+        <div class="tl-card">
+          <div class="tl-org">CESGS Universitas Airlangga × CESG Hang Seng University of Hong Kong</div>
+          <div class="tl-name">ASBIF 2026</div>
+          <div class="tl-desc">Documented the two-day Asia-Pacific Sustainable Business and Innovation Forum in Surabaya, where academics, industry leaders, and ESG practitioners gathered for talks and collaborative sessions on sustainable business and ESG practices across Asia.</div>
+          <span class="tl-pill">Event Documentation</span>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year-col">
+          <span class="tl-year">2026</span>
+          <span class="tl-year-sub">Jun</span>
+          <div class="tl-dot big"></div>
+        </div>
+        <div class="tl-connector"></div>
+        <div class="tl-card">
+          <div class="tl-org">Universitas Ciputra Surabaya</div>
+          <div class="tl-name">Coding Sprint</div>
+          <div class="tl-desc">Covered Day 3–4 of a holiday program introducing high school students to Informatics, focused on the Full-Stack Development track and Flutter sessions, part of a broader event also covering AI and Data Science.</div>
+          <span class="tl-pill">Event Documentation</span>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year-col">
+          <span class="tl-year">2026</span>
+          <span class="tl-year-sub">Jun</span>
+          <div class="tl-dot big"></div>
+        </div>
+        <div class="tl-connector"></div>
+        <div class="tl-card">
+          <div class="tl-org">Google Developer Groups on Campus · Universitas Ciputra Surabaya</div>
+          <div class="tl-name">Techvolution 3.0</div>
+          <div class="tl-desc">Captured a seminar featuring two speakers discussing AI and how we can coexist with it, organized by GDG on Campus UC Surabaya.</div>
+          <span class="tl-pill">Event Documentation</span>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year-col">
+          <span class="tl-year">2026</span>
           <span class="tl-year-sub">Mar</span>
           <div class="tl-dot big"></div>
         </div>
@@ -487,7 +565,7 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
         <div class="tl-card">
           <div class="tl-org">Google Developer Groups</div>
           <div class="tl-name">Build with AI × IWD 2026</div>
-          <div class="tl-desc">Covered sponsor booths, speaker sessions, and participant activities at a GDG event aligned with International Women's Day — capturing both candid energy and composed product moments.</div>
+          <div class="tl-desc">Covered sponsor booths, speaker sessions, and participant activities at a GDG event aligned with International Women's Day, capturing both candid energy and composed product moments.</div>
           <span class="tl-pill">Event Documentation</span>
         </div>
       </div>
@@ -532,7 +610,7 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
         <div class="tl-card">
           <div class="tl-org">Sanmar Visual · SMA Santa Maria</div>
           <div class="tl-name">17 August Ceremony</div>
-          <div class="tl-desc">Documented Indonesia's Independence Day ceremony — flag-raising, marching processions, and cultural performances with attention to composition and authentic emotion.</div>
+          <div class="tl-desc">Documented Indonesia's Independence Day ceremony, flag-raising, marching processions, and cultural performances with attention to composition and authentic emotion.</div>
           <span class="tl-pill">Ceremony</span>
         </div>
       </div>
@@ -547,7 +625,7 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
         <div class="tl-card">
           <div class="tl-org">SMA Santa Maria · Sanmar Visual</div>
           <div class="tl-name">Class Meeting Sports</div>
-          <div class="tl-desc">Action photography freezing decisive moments of inter-class basketball and futsal competitions — capturing energy, rivalry, and athleticism.</div>
+          <div class="tl-desc">Action photography freezing decisive moments of inter-class basketball and futsal competitions, capturing energy, rivalry, and athleticism.</div>
           <span class="tl-pill">Sports Documentation</span>
         </div>
       </div>
@@ -562,7 +640,7 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
         <div class="tl-card">
           <div class="tl-org">Personal</div>
           <div class="tl-name">Sky Collection</div>
-          <div class="tl-desc">A personal archive of Surabaya's shifting skies — dramatic storms, serene sunsets, and the quiet beauty of everyday atmosphere.</div>
+          <div class="tl-desc">A personal archive of Surabaya's shifting skies, dramatic storms, serene sunsets, and the quiet beauty of everyday atmosphere.</div>
           <span class="tl-pill">Personal Work</span>
         </div>
       </div>
@@ -570,20 +648,6 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
   </div>
 </section>
 
-<!-- EQUIPMENT -->
-<section class="equip-sec sec">
-  <div class="sec-inner">
-    <div class="sec-tag rv">Equipment</div>
-    <h2 class="sec-title rv d1">Shot <span class="hl">with</span></h2>
-    <div class="equip-row rv d2">
-      <div class="eq-card"><div class="eq-ico">📷</div><div class="eq-name">Canon EOS 750D</div><div class="eq-spec">24.2MP · APS-C DSLR</div></div>
-      <div class="eq-card"><div class="eq-ico">🔭</div><div class="eq-name">EF-S 18–55mm</div><div class="eq-spec">f/3.5–5.6 IS II · Kit Lens</div></div>
-      <div class="eq-card"><div class="eq-ico">📱</div><div class="eq-name">Samsung S21 Ultra</div><div class="eq-spec">108MP · Mobile Photography</div></div>
-      <div class="eq-card"><div class="eq-ico">🎞</div><div class="eq-name">Post-Processing</div><div class="eq-spec">Lightroom · Snapseed</div></div>
-
-    </div>
-  </div>
-</section>
 
 <!-- CONTACT -->
 <section class="contact-sec sec" id="contact">
@@ -628,7 +692,7 @@ const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring'
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
 (function raf(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(raf)})();
-document.querySelectorAll('a,button,.masonry-cell,.tag,.clink,.tl-card,.eq-card').forEach(el=>{
+document.querySelectorAll('a,button,.masonry-cell,.tag,.clink,.tl-card').forEach(el=>{
   el.addEventListener('mouseenter',()=>{cur.classList.add('big');ring.classList.add('big')});
   el.addEventListener('mouseleave',()=>{cur.classList.remove('big');ring.classList.remove('big')});
 });
@@ -641,41 +705,88 @@ window.addEventListener('scroll',()=>{
 // ─ GALLERY DATA by event ─
 const galleries = {
   'gallery-gdg': [
-    {src:'gdg1.JPG',title:'Sponsor Booth'},
-    {src:'gdg2.JPG',title:'Sponsor Booth'},
-    {src:'gdg3.JPG',title:'Sponsor Highlight'},
-    {src:'gdg4.JPG',title:'Sponsor Details'},
-    {src:'gdg5.JPG',title:'Product Display'},
-    {src:'gdg6.JPG',title:'Sponsor Setup'},
-    {src:'gdg7.JPG',title:'Sponsor Area'},
-    {src:'gdg8.JPG',title:'Sponsor Area'},
-    {src:'gdga1.JPG',title:'Workshop Activity'},
-    {src:'gdga2.JPG',title:'Speaker Session'},
-    {src:'gdga3.JPG',title:'Participants'},
-    {src:'gdga4.JPG',title:'Coding Session'},
-    {src:'gdga5.JPG',title:'Collaboration'},
-    {src:'gdga6.JPG',title:'Workshop'},
-    {src:'gdga7.JPG',title:'Session'},
+    {src:'gdg2.JPG',title:'Sponsor Booth'}, 
+    {src:'gdg6.JPG',title:'Sponsor Setup'}, 
+    {src:'gdga1.JPG',title:'Workshop Activity'}, 
+    {src:'gdga3.JPG',title:'Participants'}, 
+    {src:'gdga5.JPG',title:'Collaboration'}, 
     {src:'gdga8.JPG',title:'Community'},
     {src:'gdga9.JPG',title:'Activity'},
     {src:'gdga10.JPG',title:'Workshop'},
     {src:'gdga11.JPG',title:'Engagement'},
-    {src:'gdga12.JPG',title:'Session'},
-    {src:'gdga13.JPG',title:'Participants'},
+    {src:'gdga12.JPG',title:'Session'}, 
     {src:'gdga14.JPG',title:'Activity'},
     {src:'gdga15.JPG',title:'Closing'},
   ],
+  'gallery-asbif': [
+    {src:'d1asbif1.JPG',title:'ASBIF Day 1'},
+    {src:'d1asbif2.JPG',title:'ASBIF Day 1'},
+    {src:'d1asbif3.JPG',title:'ASBIF Day 1'},
+    {src:'d1asbif4.JPG',title:'ASBIF Day 1'},
+    {src:'d1asbif7.JPG',title:'ASBIF Day 1'},
+    {src:'d1asbif8.JPG',title:'ASBIF Day 1'},
+    {src:'d1asbif9.JPG',title:'ASBIF Day 1'},
+    {src:'d1asbif11.JPG',title:'ASBIF Day 1'},
+    {src:'d1asbif15.JPG',title:'ASBIF Day 1'},
+    {src:'d1asbif16.JPG',title:'ASBIF Day 1'},
+    {src:'d1asbif18.JPG',title:'ASBIF Day 1'},
+    {src:'d1asbif20.JPG',title:'ASBIF Day 1'},
+    {src:'d2asbif1.jpg',title:'ASBIF Day 2'},
+    {src:'d2asbif2.jpg',title:'ASBIF Day 2'},
+    {src:'d2asbif3.jpg',title:'ASBIF Day 2'},
+    {src:'d2asbif4.jpg',title:'ASBIF Day 2'},
+    {src:'d2asbif5.jpg',title:'ASBIF Day 2'},
+    {src:'d2asbif7.jpg',title:'ASBIF Day 2'},
+    {src:'d2asbif8.jpg',title:'ASBIF Day 2'},
+    {src:'d2asbif9.jpg',title:'ASBIF Day 2'},
+    {src:'d2asbif11.jpg',title:'ASBIF Day 2'},
+    {src:'d2asbif13.jpg',title:'ASBIF Day 2'},
+  ],
+  'gallery-codingsprint': [
+    {src:'d3cs2.jpg',title:'Coding Sprint Day 3'},
+    {src:'d3cs3.jpg',title:'Coding Sprint Day 3'},
+    {src:'d3cs4.jpg',title:'Coding Sprint Day 3'},
+    {src:'d3cs5.jpg',title:'Coding Sprint Day 3'},
+    {src:'d3cs6.jpg',title:'Coding Sprint Day 3'},
+    {src:'d3cs9.jpg',title:'Coding Sprint Day 3'},
+    {src:'d3cs10.jpg',title:'Coding Sprint Day 3'},
+    {src:'d3cs14.jpg',title:'Coding Sprint Day 3'},
+    {src:'d3cs15.jpg',title:'Coding Sprint Day 3'},
+    {src:'d4cs3.jpg',title:'Coding Sprint Day 4'},
+    {src:'d4cs6.jpg',title:'Coding Sprint Day 4'},
+    {src:'d4cs8.jpg',title:'Coding Sprint Day 4'},
+    {src:'d4cs11.jpg',title:'Coding Sprint Day 4'},
+    {src:'d4cs12.jpg',title:'Coding Sprint Day 4'},
+    {src:'d4cs14.jpg',title:'Coding Sprint Day 4'},
+    {src:'d4cs16.jpg',title:'Coding Sprint Day 4'},
+  ],
+  'gallery-techvolution': [
+    {src:'t1.jpg',title:'Techvolution 3.0'},
+    {src:'t3.jpg',title:'Techvolution 3.0'},
+    {src:'t4.jpg',title:'Techvolution 3.0'},
+    {src:'t5.jpg',title:'Techvolution 3.0'},
+    {src:'t8.jpg',title:'Techvolution 3.0'},
+    {src:'t12.jpg',title:'Techvolution 3.0'},
+    {src:'t14.jpg',title:'Techvolution 3.0'},
+    {src:'t17.jpg',title:'Techvolution 3.0'},
+    {src:'t19.jpg',title:'Techvolution 3.0'},
+    {src:'t23.jpg',title:'Techvolution 3.0'},
+    {src:'t24.jpg',title:'Techvolution 3.0'},
+    {src:'t25.jpg',title:'Techvolution 3.0'},
+    {src:'t27.jpg',title:'Techvolution 3.0'},
+    {src:'t28.jpg',title:'Techvolution 3.0'},
+    {src:'t31.jpg',title:'Techvolution 3.0'},
+    {src:'t32.jpg',title:'Techvolution 3.0'},
+  ],
   'gallery-portrait': [
-    {src:'portrait1.jpg',title:'Portrait I'},
-    {src:'portrait2.jpg',title:'Portrait II'},
+    {src:'portrait1.jpg',title:'Portrait I'}, 
     {src:'portrait3.jpg',title:'Portrait III'},
     {src:'portrait4.jpg',title:'Portrait IV'},
     {src:'portrait5.jpg',title:'Portrait V'},
     {src:'portrait6.jpg',title:'Portrait VI'},
   ],
   'gallery-ceremony': [
-    {src:'ceremony1.png',title:'Ceremony'},
-    {src:'ceremony2.png',title:'March Procession'},
+    {src:'ceremony1.png',title:'Ceremony'}, 
     {src:'ceremony3.png',title:'Flag Raising'},
     {src:'ceremony4.png',title:'March Procession'},
     {src:'ceremony5.png',title:'Ceremony'},
