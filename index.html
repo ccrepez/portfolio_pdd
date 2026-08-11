@@ -293,7 +293,6 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
 <div class="ticker-wrap">
   <div class="ticker-track">
     <span class="ticker-item">Event Documentation <span class="dot">✦</span></span>
-    <span class="ticker-item">GDG Build with AI × IWD 2026 <span class="dot">✦</span></span>
     <span class="ticker-item">Portrait Photography <span class="dot">✦</span></span>
     <span class="ticker-item">Sanmar Visual <span class="dot">✦</span></span>
     <span class="ticker-item">Artupic Creative Team <span class="dot">✦</span></span>
@@ -301,7 +300,6 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
     <span class="ticker-item">Visual Storytelling <span class="dot">✦</span></span>
     <span class="ticker-item">Surabaya, Indonesia <span class="dot">✦</span></span>
     <span class="ticker-item">Event Documentation <span class="dot">✦</span></span>
-    <span class="ticker-item">GDG Build with AI × IWD 2026 <span class="dot">✦</span></span>
     <span class="ticker-item">Portrait Photography <span class="dot">✦</span></span>
     <span class="ticker-item">Sanmar Visual <span class="dot">✦</span></span>
     <span class="ticker-item">Artupic Creative Team <span class="dot">✦</span></span>
@@ -320,12 +318,24 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
       <p style="font-size:.88rem;color:var(--text-muted);margin-top:.5rem;max-width:560px">A collection of moments captured across events, portraits, performances, and personal projects, organized by story.</p>
     </div>
 
+    <!-- EVENT 0: Ideafest 2026 -->
+    <div class="event-story rv">
+      <div class="event-meta">
+        <span class="event-badge">Event Documentation</span>
+        <span class="event-date">August 2026</span>
+        <span class="event-cam">📷 Sony A7C II · Sony ILCE-7M3</span>
+      </div>
+      <h3 class="event-title">IDEAFEST Surabaya 2026 <span class="hl">× The Next Leap</span></h3>
+      <p class="event-story-text">Two days of documenting one of Surabaya's biggest creative gatherings, featuring 200+ speakers across IdeaTalks, conference sessions, and community activities. I moved between stages, sessions, and crowds throughout the event, capturing everything from speakers in the spotlight to candid interactions, details, and the energy that filled the venue.</p>
+      <div class="masonry" id="gallery-ideafest"></div>
+    </div>
+
     <!-- EVENT 1: GDG Build with AI × IWD 2026 -->
     <div class="event-story rv">
       <div class="event-meta">
         <span class="event-badge">Event Documentation</span>
         <span class="event-date">March 2026</span>
-        <span class="event-cam">📷 Sony A7 II · Sony ILCE-7M3</span>
+        <span class="event-cam">📷 Sony A7C II · Sony ILCE-7M3</span>
       </div>
       <h3 class="event-title">GDG Build with AI <span class="hl">× IWD 2026</span></h3>
       <p class="event-story-text">One of the most energizing events I've had the chance to document. Google Developer Groups held this special edition in line with International Women's Day, and the energy in the room was something else. I moved between sponsor booths, speaker sessions, and participant activities, trying to catch both the quiet product details and the louder, candid moments of connection and curiosity.</p>
@@ -513,14 +523,14 @@ footer{position:relative;z-index:2;background:var(--surface);border-top:1px soli
       <div class="tl-item">
         <div class="tl-year-col">
           <span class="tl-year">2026</span>
-          <span class="tl-year-sub">Jun</span>
+          <span class="tl-year-sub">Aug</span>
           <div class="tl-dot big"></div>
         </div>
         <div class="tl-connector"></div>
         <div class="tl-card">
-          <div class="tl-org">CESGS Universitas Airlangga × CESG Hang Seng University of Hong Kong</div>
-          <div class="tl-name">ASBIF 2026</div>
-          <div class="tl-desc">Documented the two-day Asia-Pacific Sustainable Business and Innovation Forum in Surabaya, where academics, industry leaders, and ESG practitioners gathered for talks and collaborative sessions on sustainable business and ESG practices across Asia.</div>
+          <div class="tl-org">IDEAFEST Surabaya · The Next Leap</div>
+          <div class="tl-name">IDEAFEST 2026</div>
+          <div class="tl-desc">Documented two days of one of Surabaya's biggest creative events, bringing together 200+ speakers, industry leaders, and creative communities through IdeaTalks, conference sessions, and various event activities. Captured the scale of the event alongside candid interactions, speaker moments, and the energy throughout the venue.</div>
           <span class="tl-pill">Event Documentation</span>
         </div>
       </div>
@@ -704,6 +714,29 @@ window.addEventListener('scroll',()=>{
 
 // ─ GALLERY DATA by event ─
 const galleries = {
+  'gallery-ideafest': [
+    {src:'if1.png',title:'IDEAFEST 2026'},
+    {src:'if2.png',title:'IDEAFEST 2026'},
+    {src:'if3.png',title:'IDEAFEST 2026'},
+    {src:'if5.png',title:'IDEAFEST 2026'},
+    {src:'if7.png',title:'IDEAFEST 2026'},
+    {src:'if8.png',title:'IDEAFEST 2026'},
+    {src:'if12.png',title:'IDEAFEST 2026'},
+    {src:'if13.png',title:'IDEAFEST 2026'},
+    {src:'if14.png',title:'IDEAFEST 2026'},
+    {src:'if15.png',title:'IDEAFEST 2026'},
+    {src:'if16.png',title:'IDEAFEST 2026'},
+    {src:'if17.png',title:'IDEAFEST 2026'},
+    {src:'if20.png',title:'IDEAFEST 2026'},
+    {src:'if22.png',title:'IDEAFEST 2026'},
+    {src:'if23.png',title:'IDEAFEST 2026'},
+    {src:'if25.png',title:'IDEAFEST 2026'},
+    {src:'if26.png',title:'IDEAFEST 2026'},
+    {src:'if28.png',title:'IDEAFEST 2026'},
+    {src:'if29.png',title:'IDEAFEST 2026'},
+    {src:'if30.png',title:'IDEAFEST 2026'},
+    {src:'if32.png',title:'IDEAFEST 2026'},
+  ],
   'gallery-gdg': [
     {src:'gdg2.JPG',title:'Sponsor Booth'}, 
     {src:'gdg6.JPG',title:'Sponsor Setup'}, 
